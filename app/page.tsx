@@ -50,13 +50,6 @@ export default function Home() {
               <StatusBadge>Mississauga, Ontario</StatusBadge>
             </div>
           </div>
-          <aside className="hero-note">
-            <span className="note-icon" aria-hidden="true">i</span>
-            <div>
-              <strong>Alcance de este documento</strong>
-              <p>Describe nuestro perfil y reúne información disponible. No selecciona ni desarrolla un proceso migratorio y no sustituye asesoría profesional.</p>
-            </div>
-          </aside>
         </section>
 
         <section className="deadline-band" aria-label="Fecha prioritaria">

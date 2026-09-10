@@ -40,9 +40,6 @@ h1 { max-width: 850px; margin: 0; font-family: Georgia, 'Times New Roman', serif
 .badge { display: inline-flex; align-items: center; width: fit-content; padding: .34rem .72rem; border: 1px solid #d8dde4; border-radius: 999px; background: #f6f7f8; color: #4d5665; font-size: .73rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
 .badge-confirmed { border-color: #b9dece; background: var(--green-soft); color: var(--green); }
 .badge-pending { border-color: #ead6a9; background: var(--gold-soft); color: #7b4d0e; }
-.hero-note { display: flex; gap: 1rem; padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 18px 60px rgba(24,54,92,.07); }
-.hero-note p { margin: .3rem 0 0; color: var(--muted); font-size: .9rem; }
-.note-icon { flex: 0 0 auto; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--blue-soft); color: var(--navy); font-weight: 800; }
 
 .deadline-band { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; padding: clamp(1.5rem, 4vw, 3rem); border-radius: 28px; background: var(--navy); color: white; }
 .deadline-band .eyebrow { color: #ffc8ca; }
@@ -132,7 +129,6 @@ footer a { color: var(--red); font-weight: 750; text-decoration: none; }
 @media (max-width: 900px) {
   nav { display: none; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 5rem; }
-  .hero-note { max-width: 620px; }
   .summary-grid { grid-template-columns: repeat(2, 1fr); }
   .health-layout, .two-column-copy, .document-columns { grid-template-columns: 1fr; }
 }
