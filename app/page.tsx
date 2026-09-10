@@ -46,7 +46,7 @@ export default function Home() {
               Una visión completa y organizada de nuestra historia, situación actual, prioridades y datos pendientes para una futura evaluación migratoria.
             </p>
             <div className="hero-meta">
-              <StatusBadge tone="confirmed">Actualizado: 2 de septiembre de 2026</StatusBadge>
+              <StatusBadge tone="confirmed">Actualizado: 10 de septiembre de 2026</StatusBadge>
               <StatusBadge>Mississauga, Ontario</StatusBadge>
             </div>
           </div>
