@@ -17,6 +17,10 @@ export const metadata: Metadata = {
     description: 'Canadá · Información organizada para una futura evaluación',
     images: ['/og.png'],
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
