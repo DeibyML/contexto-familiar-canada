@@ -2,59 +2,8 @@ const navItems = [
   ['resumen', 'Resumen'],
   ['perfiles', 'Perfiles'],
   ['salud', 'Salud'],
-  ['pendientes', 'Pendientes'],
   ['documentos', 'Documentos'],
 ] as const;
-
-const pendingGroups = [
-  {
-    title: 'Prioridad alta · Expediente médico del hijo',
-    questions: [
-      '¿Cuál fue el diagnóstico exacto y el tipo de cáncer?',
-      '¿En qué hospital fue tratado y quién es el oncólogo o equipo responsable?',
-      '¿Cuáles fueron las fechas de la cirugía, quimioterapia y finalización del tratamiento activo?',
-      '¿Qué indica por escrito el equipo médico sobre pronóstico, riesgo de recurrencia, pruebas necesarias y duración del seguimiento?',
-      '¿Cuál es la frecuencia oficial de los controles: cada tres meses, cada seis meses o un calendario que cambia con el tiempo?',
-      '¿Cuáles son las próximas citas, estudios de imagen, análisis o consultas programadas?',
-      '¿Qué consecuencias médicas concretas tendría retrasar o interrumpir los controles?',
-      '¿Tienen cartas del oncólogo, resumen clínico, informe de cirugía, protocolo de quimioterapia, resultados y calendario de vigilancia?',
-      'Si regresaran a Colombia, ¿en qué ciudad vivirían, a qué EPS pertenecería el niño y qué hospital o equipo podría asumir el seguimiento?',
-      '¿Han investigado tiempos de afiliación, autorizaciones, remisiones a oncología pediátrica, disponibilidad de pruebas y costos en esa ciudad?',
-    ],
-  },
-  {
-    title: 'Empleo y documentos de Deiby',
-    questions: [
-      '¿Puede obtener de TripArc una carta laboral reciente que incluya cargo, fechas, salario, horas y funciones detalladas, aunque la empresa no apoye una solicitud migratoria?',
-      '¿Las funciones reales de esa carta coinciden principalmente con NOC 21232, o incluyen arquitectura o ingeniería de software, liderazgo u otras responsabilidades diferentes?',
-      '¿Cuál fue la fecha exacta del CELPIP de abril de 2025, cuáles fueron los cuatro puntajes y cuándo vence?',
-      '¿El diploma, transcript y carta de finalización de Lambton College están disponibles?',
-    ],
-  },
-  {
-    title: 'Express Entry',
-    questions: [
-      '¿Cuál es la fecha de vencimiento que muestra el perfil de Express Entry?',
-      '¿Tienen el desglose actual de los 452 puntos CRS por categoría?',
-      '¿Cuál de los certificados de francés fue declarado en el perfil después de la actualización más reciente?',
-      '¿El perfil debe actualizarse cuando lleguen los resultados del examen del 9 de septiembre de 2026?',
-    ],
-  },
-  {
-    title: 'Liliana y beneficios parentales',
-    questions: [
-      '¿En qué fecha y año exactos comenzaron los beneficios de maternidad y parentales?',
-      '¿Cuántas semanas de maternity y parental benefits aparecen oficialmente asignadas a Liliana y cuántas a Deiby?',
-      'Si en el futuro fuera necesario acreditar la experiencia canadiense de Liliana, ¿pueden obtener cartas, pay stubs y T4 de la panadería o tienda y de sus demás empleos?',
-    ],
-  },
-  {
-    title: 'Información económica',
-    questions: [
-      '¿Cuál es el monto aproximado de los ahorros líquidos del hogar? Solo sería necesario precisarlo si una evaluación concreta requiere demostrar fondos o capacidad de sostenimiento.',
-    ],
-  },
-];
 
 function StatusBadge({ children, tone = 'neutral' }: { children: React.ReactNode; tone?: 'neutral' | 'confirmed' | 'pending' }) {
   return <span className={`badge badge-${tone}`}>{children}</span>;
@@ -129,7 +78,7 @@ export default function Home() {
             <article className="summary-card accent-blue"><span>02</span><h3>Estatus</h3><p>PGWP y OWP emitidos el 6 de octubre de 2023, vigentes hasta el 6 de octubre de 2026. No hay solicitudes migratorias pendientes ni historial de incumplimiento.</p></article>
             <article className="summary-card accent-gold"><span>03</span><h3>Trabajo</h3><p>Deiby trabaja como Senior Software Developer en TripArc desde abril de 2023, a tiempo completo, con ingresos aproximados de CAD 100,000 al año.</p></article>
             <article className="summary-card accent-green"><span>04</span><h3>Express Entry</h3><p>Perfil activo con 452 puntos CRS. El sistema muestra elegibilidad para Canadian Experience Class y Federal Skilled Worker Program.</p></article>
-            <article className="summary-card accent-purple"><span>05</span><h3>Idiomas</h3><p>CELPIP informado como CLB 7 y mejor TCF con resultados B2. Deiby presentará otro examen de francés el 9 de septiembre de 2026.</p></article>
+            <article className="summary-card accent-purple"><span>05</span><h3>Idiomas</h3><p>CELPIP informado como CLB 7 y mejor TCF con comprensión escrita C1 y las demás habilidades en B2.</p></article>
             <article className="summary-card accent-rose"><span>06</span><h3>Prioridad familiar</h3><p>Mantener la permanencia legal y la continuidad de los controles médicos del hijo. Si solo uno puede trabajar, la prioridad es conservar el empleo de Deiby.</p></article>
           </div>
         </section>
@@ -145,7 +94,7 @@ export default function Home() {
             <div><time>22 abr 2023</time><p>Graduación de Deiby en Lambton College.</p></div>
             <div><time>06 oct 2023</time><p>Emisión del PGWP y OWP.</p></div>
             <div><time>Ene 2026</time><p>Diagnóstico de cáncer del hijo.</p></div>
-            <div><time>19 jun 2026</time><p>Mejor sesión TCF registrada.</p></div>
+            <div><time>19 ago 2026</time><p>Sesión TCF con mejor resultado registrada.</p></div>
             <div className="timeline-next"><time>09 sep 2026</time><p>Próximo examen de francés.</p></div>
             <div className="timeline-critical"><time>06 oct 2026</time><p>Vencimiento de ambos permisos.</p></div>
             <div><time>03 nov 2026</time><p>El hijo cumplirá un año.</p></div>
@@ -212,10 +161,10 @@ export default function Home() {
               <h3>Francés</h3>
               <p>Deiby ha presentado TCF y TEF varias veces durante 2026. Todos los certificados mencionados siguen vigentes. Su mejor resultado corresponde al TCF:</p>
               <div className="table-wrap"><table><tbody>
-                <tr><th>Centro</th><td>North York, GB Language</td></tr><tr><th>Fecha de la sesión</th><td><strong>19 de junio de 2026</strong></td></tr><tr><th>Emisión de resultados</th><td><strong>30 de junio de 2026</strong></td></tr><tr><th>Vencimiento</th><td><strong>29 de junio de 2028</strong></td></tr><tr><th>Número de certificado</th><td className="break-anywhere"><strong>7AB68064-8D35-4509-8815-E3BCBB4EBE12</strong></td></tr>
+                <tr><th>Centro</th><td>North York, GB Language</td></tr><tr><th>Fecha de la sesión</th><td><strong>19 de agosto de 2026</strong></td></tr><tr><th>Emisión de resultados</th><td><strong>7 de septiembre de 2026</strong></td></tr><tr><th>Vencimiento</th><td><strong>6 de septiembre de 2028</strong></td></tr><tr><th>Número de attestation</th><td className="break-anywhere">41F462E4-D71A-493… <small>(la imagen compartida está recortada)</small></td></tr>
               </tbody></table></div>
               <div className="table-wrap"><table><thead><tr><th>Habilidad</th><th>Puntaje</th><th>Nivel CEFR</th></tr></thead><tbody>
-                <tr><td>Comprensión oral</td><td>448/699 <small>(faltaron 10 puntos)</small></td><td>B2</td></tr><tr><td>Comprensión escrita</td><td>496/699</td><td>B2</td></tr><tr><td>Expresión oral</td><td>13/20</td><td>B2</td></tr><tr><td>Expresión escrita</td><td>12/20</td><td>B2</td></tr>
+                <tr><td>Comprensión oral</td><td>448/699</td><td>B2</td></tr><tr><td>Comprensión escrita</td><td>502/699</td><td>C1</td></tr><tr><td>Expresión oral</td><td>12/20</td><td>B2</td></tr><tr><td>Expresión escrita</td><td>10/20</td><td>B2</td></tr>
               </tbody></table></div>
               <p>Deiby presentará otro examen de francés el <strong>9 de septiembre de 2026</strong>.</p>
             </Detail>
@@ -268,26 +217,6 @@ export default function Home() {
           <div className="two-column-copy">
             <div><h3>Capacidad económica</h3><p>No tenemos deudas. Nuestras obligaciones económicas principales corresponden al hogar y a nuestro hijo.</p><p>Ambos tenemos ahorros líquidos. La familia podría mantenerse aproximadamente tres meses si ninguno trabaja, aunque esto consumiría sus recursos.</p><p>Tenemos T4, Notices of Assessment, pay stubs y declaraciones de impuestos de los años trabajados en Canadá.</p></div>
             <div><h3>Residencia y prioridades</h3><p>Tenemos contrato de arriendo, cuentas, seguros, historial tributario y otras pruebas continuas de residencia en Ontario. Participamos en una iglesia.</p><p>No participamos actualmente en asociaciones, voluntariados ni redes profesionales canadienses.</p><p>Nuestra preferencia es que ambos podamos seguir trabajando. Si no fuera posible, la prioridad laboral es que Deiby conserve su empleo, por ser el ingreso principal. También es esencial mantener la permanencia legal de toda la familia.</p><p>Estamos dispuestos a mudarnos de ciudad o provincia por una oportunidad laboral legítima. También estamos dispuestos a salir de Canadá si no existe una vía legal para permanecer.</p></div>
-          </div>
-        </section>
-
-        <section id="pendientes" className="section-block pending-section">
-          <div className="section-heading">
-            <p className="eyebrow">Próximos datos por completar</p>
-            <h2>22 preguntas verdaderamente pendientes</h2>
-            <p>Estas preguntas separan lo confirmado de lo que todavía debe documentarse o verificarse.</p>
-          </div>
-          <div className="details-stack">
-            {pendingGroups.map((group, groupIndex) => {
-              const previousCount = pendingGroups.slice(0, groupIndex).reduce((total, item) => total + item.questions.length, 0);
-              return (
-                <Detail key={group.title} title={group.title} open={groupIndex === 0}>
-                  <ol start={previousCount + 1} className="question-list">
-                    {group.questions.map(question => <li key={question}>{question}</li>)}
-                  </ol>
-                </Detail>
-              );
-            })}
           </div>
         </section>
 

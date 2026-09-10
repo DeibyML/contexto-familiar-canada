@@ -116,9 +116,6 @@ tr:last-child > * { border-bottom: 0; }
 .two-column-copy > div { padding: 2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .two-column-copy h3 { margin: 0 0 1rem; }
 .two-column-copy p { color: var(--muted); }
-.question-list { padding-left: 1.5rem; }
-.question-list li { padding-left: .5rem; margin: 1rem 0; }
-.question-list li::marker { color: var(--red); font-weight: 800; }
 .document-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .document-columns article { padding: 2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .document-columns ul { padding: 0; list-style: none; }
