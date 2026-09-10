@@ -5,6 +5,8 @@ const navItems = [
   ['documentos', 'Documentos'],
 ] as const;
 
+export const dynamic = 'force-static';
+
 function StatusBadge({ children, tone = 'neutral' }: { children: React.ReactNode; tone?: 'neutral' | 'confirmed' | 'pending' }) {
   return <span className={`badge badge-${tone}`}>{children}</span>;
 }
